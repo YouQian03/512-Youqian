@@ -5,7 +5,7 @@ Game Overview
 Maze Run is an innovative motion-controlled maze game where players tilt the device to guide their character through mazes and reach the exit within a time limit. The game features three difficulty modes with a total of 30 carefully designed levels.
 Hardware Requirements
 
-Microcontroller: CircuitPython-compatible board (e.g., Adafruit Feather)
+Microcontroller: CircuitPython-compatible board
 Display: SSD1306 OLED Display (128x64 pixels, I2C interface)
 Accelerometer: ADXL345 3-axis accelerometer (I2C interface)
 Rotary Encoder: Connected to D2 and D3 pins
