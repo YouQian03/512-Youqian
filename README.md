@@ -1,10 +1,11 @@
 # 512-Youqian
 ----------------Maze Run Game----------------
-A motion-controlled maze game built with CircuitPython, where players tilt the device to navigate through mazes.
-Game Overview
-Maze Run is an innovative motion-controlled maze game where players tilt the device to guide their character through mazes and reach the exit within a time limit. The game features three difficulty modes with a total of 30 carefully designed levels.
-Hardware Requirements
 
+A motion-controlled maze game built with CircuitPython, where players tilt the device to navigate through mazes.
+1.Game Overview
+Maze Run is an innovative motion-controlled maze game where players tilt the device to guide their character through mazes and reach the exit within a time limit. The game features three difficulty modes with a total of 30 carefully designed levels.
+
+2.Hardware
 Microcontroller: CircuitPython-compatible board
 Display: SSD1306 OLED Display (128x64 pixels, I2C interface)
 Accelerometer: ADXL345 3-axis accelerometer (I2C interface)
@@ -28,7 +29,7 @@ Tilt right (Y-axis negative) → Move right
 
 
 
-Motion Detection System
+3.Motion Detection System
 The game uses an intelligent tilt detection system:
 
 Angle Threshold: Tilt angle must exceed 20 degrees
@@ -46,22 +47,23 @@ STATE_GAME_PLAYING (Gameplay): Main game loop
 STATE_GAME_OVER (Game Over): Failure screen when time runs out
 STATE_RESULT (Victory): Victory screen after completing all levels
 
-Game Modes
+4.Game Modes
 Difficulty Levels
 DifficultyTime LimitLevelsFeaturesEASY60s/level10 levelsSimpler mazes, beginner-friendlyNORMAL45s/level10 levelsMirrored mazes, medium difficultyHARD30s/level10 levelsMost challenging levels, time pressure
+
 Level Design
 
 EASY Mode: 10 progressive levels, from simple to complex
 NORMAL Mode: EASY levels horizontally mirrored, start and exit positions swapped
 HARD Mode: EASY levels 4-10 (harder levels) + 3 brand new challenging levels
 
-Scoring System
+5.Scoring System
 
 Each completed level awards 10 points
 Maximum score: 100 points (complete all 10 levels)
 If time runs out, game ends and displays current score
 
-Visual Feedback
+6.Visual Feedback
 LED Effects
 The game provides rich visual feedback through NeoPixel LED:
 
@@ -82,7 +84,8 @@ S:0                     #.###..#
 [E] = Exit
 [#] = Wall
 [.] = Path
-Gameplay Flow
+
+7.Gameplay Flow
 
 Start Game: Display splash screen, press button to continue
 Select Difficulty: Rotate encoder to choose, press button to confirm
@@ -104,7 +107,7 @@ Time runs out → Game over screen + red LED flash
 
 Select Action: Restart or Return to main menu
 
-Technical Features
+8.Technical Features
 Performance Optimization
 
 Display Update Throttling: Game interface updates every 0.5 seconds to reduce flickering
@@ -118,20 +121,22 @@ State Machine Pattern: Clear game state management
 Modular Functions: Each function independently encapsulated
 Extensible Design: Easy to add new levels and difficulty modes
 
-Dependencies
+9.Dependencies
 pythonadafruit_display_text
 adafruit_displayio_ssd1306
 adafruit_adxl34x
 neopixel
 rainbowio
 rotary_encoder (custom library)
-Gameplay Tips
+
+10.Gameplay Tips
 
 Control Technique: Maintain steady tilt, avoid frequent shaking
 Plan Your Route: Observe maze structure before moving, plan the shortest path
 Time Management: Watch the countdown, don't waste time in dead ends
 Confirm Action: Must press button after reaching exit (E) to proceed to next level
 
+11.Display Legend
 Top Left L: Current Level / Total Levels
 Left T: Remaining Time (seconds)
 Bottom Left S: Current Score
